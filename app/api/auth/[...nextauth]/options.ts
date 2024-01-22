@@ -3,18 +3,7 @@ import Github from "next-auth/providers/github";
 export const option = {
     secret:process.env.NEXTAUTH_SECERT as string,
     providers: [
-        Github({
-            profile(profile: any) {
-                return {
-                    id: profile.id,
-                    name: profile.name,
-                    email: profile.email,
-                    image: profile.avatar_url,
-                    auth: "github"
-                }
-            },
-        
-        
+        Github({        
             clientId: process.env.GITHUB_CLIENT_ID ?? '',
             clientSecret: process.env.GITHUB_CLIENT_SECRET ?? ''
         })
