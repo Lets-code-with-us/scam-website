@@ -5,6 +5,8 @@ function page() {
     <div className='flex flex-col items-center justify-center'>
         <Scam value={"fit"} url={"http://localhost:4000"}/>
         <Scam value={"fit1"} url={"http://localhost:4010"}/>
+        <Scam value={"fit1"} url={"http://localhost:4010"}/>
+
     </div>
   )
 }
