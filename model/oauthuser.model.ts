@@ -1,24 +1,21 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
 
+const oauthuserSchema = new mongoose.Schema({
     email:{
+        type:String,
+        lowercase:true,
+        require:true
+    },
+    avator:{
+        type:String,
+    },
+    username:{
         type:String,
         require:true,
         lowercase:true,
         unique:true
     },
-
-    pasword:{
-        type:String,
-        require:true
-    },
-
-    avator:{
-        type:String,
-        require:true
-    },
-    
     Blogs:[
         {
             type:mongoose.Schema.ObjectId,
@@ -43,10 +40,8 @@ twitter:{
     type:String
 }
     
-    
-
 
 })
 
 
-export const User = mongoose.model('User',userSchema) 
+export const OauthModel = mongoose.model("Oauth",oauthuserSchema)
