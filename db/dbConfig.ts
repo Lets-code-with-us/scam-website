@@ -5,22 +5,23 @@ import mongoose from "mongoose";
 // connect db
 export async function dbConnect(){
     try {
-        mongoose.connect('mongodb+srv://admin:admin@testdb.9lk9o4r.mongodb.net')
+        await mongoose.connect(`${process.env.MONGO_URI!}/${process.env.DBNAME}`)
         const connection = mongoose.connection;
         connection.on('connected',()=>{
+            console.log('database connected')
+
         })
         
         
 		connection.on('error',(err)=>{
-            console.log(err)
+            console.log("connection error: ",err)
             process.exit();
 		})
         
-        console.log('database connected')
         
     } 
     catch (error) {
-        console.log(error)
+        console.log("dataBase error: ",error)
         process.exit()
         
         
