@@ -10,10 +10,6 @@ const menuItems = [
     href: "/feed",
   },
   {
-    name: "Trending",
-    href: "/trend",
-  },
-  {
     name: "Profile",
     href: "/profile",
   },

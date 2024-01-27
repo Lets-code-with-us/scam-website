@@ -1,11 +1,12 @@
 import React from 'react'
 import { getServerSession } from 'next-auth'
 import {option} from "@/app/api/auth/[...nextauth]/options"
+import Link from 'next/link'
 
 
 export default async function Avatar() {
   const session = await getServerSession(option)
-  if(!session) return <div>Please Login</div>
+  // if(!session) return <div>Please Login</div>
 
   return (
     <div className="flex items-center space-x-2">
@@ -18,6 +19,7 @@ export default async function Avatar() {
         <span className="text-sm font-medium text-gray-900">{session?.user?.name}</span>
         <span className="text-sm font-medium text-gray-500">@{session?.user?.name}</span>
       </span>
+    <Link href="/post">Create a New Post</Link>
     </div>
   )
 }
