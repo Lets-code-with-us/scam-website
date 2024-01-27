@@ -20,10 +20,23 @@ function NewsLetter() {
     }
   }, [email]);
   async function sendMail() {
-  await axios.post('/api/email', {email})
+    try {
+      const response =  await axios.post('/api/email', {email})
+      if(response){
+        toast.success('Email sent successfully');
 
-  toast.success('Email sent successfully');
-setEmail("");
+      }
+      else{
+        toast.error('Something went wrong')
+      }
+
+    setEmail("");
+      
+    } catch (error) {
+      console.log("error: ",error)
+      
+    }
+ 
 
 }
  

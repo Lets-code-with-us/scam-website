@@ -1,6 +1,5 @@
 
 import React from 'react'
-import VideoSection from './VideoSection'
 
 
 
@@ -18,7 +17,6 @@ function Sider() {
         </p>
       </div>
         
-      <VideoSection />
     </div>
   )
 }
