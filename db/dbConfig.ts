@@ -1,17 +1,30 @@
 import mongoose from "mongoose";
-import ApiError from "@/util/apiError";
+// import ApiError from "@/util/apiError";
+
 
 // connect db
-const dbConnect = async()=>{
+export async function dbConnect(){
     try {
-       const dataBase =  await  mongoose.connect("")
-        console.log(dataBase.connection)
+        mongoose.connect('mongodb+srv://admin:admin@testdb.9lk9o4r.mongodb.net')
+        const connection = mongoose.connection;
+        connection.on('connected',()=>{
+        })
         
-    } catch (error) {
-        throw new ApiError(500, "Internal Server Error");
+        
+		connection.on('error',(err)=>{
+            console.log(err)
+            process.exit();
+		})
+        
+        console.log('database connected')
+        
+    } 
+    catch (error) {
+        console.log(error)
+        process.exit()
+        
         
     }
 
 }
 
-export default dbConnect

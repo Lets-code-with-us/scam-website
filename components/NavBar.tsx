@@ -32,8 +32,8 @@ function Navbar() {
   };
 
   return (
-    <div className="relative w-full bg-white mb-8 mt-5 z-10">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+    <div className="relative w-full bg-white mb-2 mt-5 z-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 animate__animated animate__fadeIn animate__delay-1s">
         <div className="inline-flex items-center space-x-2">
           <Link href="/">
             <span className="font-bold">

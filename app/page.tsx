@@ -14,6 +14,8 @@ import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 export default function Home() {
 
+ 
+
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
    
@@ -21,9 +23,10 @@ export default function Home() {
   return (
     <ReactLenis root>
       <>
+      {/* <Navbar/> */}
        <HeroSection />
        <Sider />
-       <SectionTestional />
+       {/* <SectionTestional /> */}
        <Faq />
 
        <Feature />

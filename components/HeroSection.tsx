@@ -1,13 +1,18 @@
-import React from "react";
+import React, { lazy } from "react";
 import "animate.css";
 import Link from "next/link";
+let src = "/pexels_videos_2611250 (2160p).mp4"
 export default function HeroSection() {
 
   return (
-    <div className="relative w-full mb-32 ">
-      <div className="relative isolate z-0 bg-white px-6 pt-14 lg:px-8">
+    <div className="relative w-full mb-32 h-dvh">
+      <div className="absolute">
+
+      <video src={src}  className="w-100 aspect-video animate__animated animate__fadeIn animate__delay-1s "loop autoPlay muted preload="none"></video>
+      </div>
+      <div className="relative isolate z-0 bg-transparent px-6 pt-14 lg:px-8">
         <div className="relative mx-auto max-w-2xl py-24">
-          <div className="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
+          <div className="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem] animate__animated animate__fadeIn animate__delay-2s">
             <svg
               className= "relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
               viewBox="0 0 1155 678"
@@ -34,10 +39,10 @@ export default function HeroSection() {
             </svg>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl animate__animated animate__fadeInLeft animate__delay-1s">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl animate__animated animate__fadeInLeft animate__delay-1s">
               Welcome to ScamAlerts.com
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600  animate__animated animate__fadeIn animate__delay-2s">
+            <p className="mt-6 text-lg leading-8 text-slate-300  animate__animated animate__fadeIn animate__delay-2s">
               In a world driven by technology and interconnectedness, staying
               vigilant against evolving scams is crucial. At ScamAlerts.com, we
               are dedicated to keeping you informed about the latest types of
@@ -50,7 +55,7 @@ export default function HeroSection() {
               
               <button
                 type="button"
-                className="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                className="rounded-md border border-white px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                 Get Started
               </button>
