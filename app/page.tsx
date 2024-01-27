@@ -6,7 +6,6 @@ import NewsLetter from "@/components/NewsLetter";
 import Feature from "@/components/Feature";
 import Faq from "@/components/FAQ";
 import Cta from "@/components/CTA";
-import SectionTestional from "@/components/SectionTestional";
 import "animate.css";
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
