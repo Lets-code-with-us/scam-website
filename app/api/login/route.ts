@@ -1,10 +1,8 @@
 import { NextRequest,NextResponse } from "next/server";
-import { dbConnect } from "@/db/dbConfig";
 
-// dbConnect()
 export async function GET(){
-
-    try {
+  
+  try {
        return  NextResponse.json({"messsage":"connect db"})
         
     } catch (error) {

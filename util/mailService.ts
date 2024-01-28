@@ -17,7 +17,8 @@ export async function sendEmail({email}:any) {
       subject: "Hello ✔", 
       html: "<b>Welcome to scam website</b><br/><b>Thanks for joining the newsletter</b>", 
     });
-    await transport.sendMail(info);
+    const mailResponse = await transport.sendMail(info);
+    return mailResponse
     
   } catch (error: any) {
     throw new Error(error);

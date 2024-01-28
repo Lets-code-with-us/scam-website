@@ -14,6 +14,6 @@ const newLetterSchema = new mongoose.Schema({
     }]
 });
 
-const Subscriber = mongoose.model("Subscriber", newLetterSchema);
+const Subscriber = mongoose.models.subscribers ||   mongoose.model("Subscriber", newLetterSchema);
 
 export default Subscriber;
